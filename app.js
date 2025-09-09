@@ -43,9 +43,11 @@ reset.addEventListener('click', function(){
 
 maxwinPoint.addEventListener('change', function(){
   let maxwinPointVal = parseInt(this.value);
+  let warn = document.getElementById("warning");
 
   if (winPoint > maxwinPointVal && isGameOver){
     warning.innerText = 'Reset terlebih dahulu!';
+    warn.scrollIntoView({ behavior: "smooth", block: "center" });
     // document.body.append(warning);
     return;
   }
